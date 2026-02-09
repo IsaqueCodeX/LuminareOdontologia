@@ -6,11 +6,11 @@
   /* --- PALETTE --- */
   --color-primary: #00C9A7;       /* Turquesa Tecnológico */
   --color-primary-dark: #009e82;
-  --color-secondary: #0F172A;     /* Azul Marinho Profundo */
+  --color-secondary: #334155;     /* Azul Marinho Profundo */
   --color-bg-light: #F8F9FA;      /* Cinza Gelo */
   --color-white: #FFFFFF;
   --color-text: #334155;
-  --color-text-light: #64748B;
+  --color-text-light: #0F172A;
   
   /* --- GLASSMORPHISM --- */
   --glass-bg: rgba(255, 255, 255, 0.7);
@@ -111,6 +111,24 @@ img { max-width: 100%; display: block; object-fit: cover; }
   transition: var(--transition-fast);
 }
 
+/* Gradient overlay for header legibility */
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
 .header.scrolled {
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
@@ -134,6 +152,7 @@ img { max-width: 100%; display: block; object-fit: cover; }
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
 }
 
 .logo span { color: var(--color-primary); }
@@ -148,6 +167,7 @@ img { max-width: 100%; display: block; object-fit: cover; }
   font-size: 0.95rem;
   letter-spacing: 0.5px;
   position: relative;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
 }
 
 .nav-link::after {
