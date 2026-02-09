@@ -100,7 +100,7 @@ img { max-width: 100%; display: block; object-fit: cover; }
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999; /* Increased to always stay on top */
   padding: 1.5rem 0;
   transition: var(--transition-fast);
 }
@@ -583,7 +583,17 @@ img { max-width: 100%; display: block; object-fit: cover; }
 
 @media (max-width: 768px) {
   h1 { font-size: 2.5rem; }
-  .hero-content { margin-left: 0; text-align: center; padding: 0 1rem; }
+  .hero-content { margin-left: 0; text-align: center; padding: 0 1.5rem; max-width: 100%; }
+  
+  /* Mobile hero overlay - vertical gradient instead of horizontal */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0.3) 100%
+    );
+  }
   
   .differentials-grid { display: flex; flex-direction: column; }
   
