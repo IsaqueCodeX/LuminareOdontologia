@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminare Odontologia | Arte do Sorriso</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Glassmorphism -->
+    <header class="header" id="main-header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>✦</span> Luminare
+            </a>
+            <nav class="nav-links">
+                <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="#resultados" class="nav-link">Resultados</a>
+                <a href="#tratamentos" class="nav-link">Tratamentos</a>
+                <a href="#clinica" class="nav-link">A Clínica</a>
+            </nav>
+            <a href="#contato" class="btn-cta">Agendar Consulta</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="assets/imagens/Hero-Section-_Sorriso-Perfeito.webp" alt="Sorriso Perfeito Luminare" class="hero-bg">
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <h1 class="reveal-up">A Arte do <br>Sorriso Perfeito.</h1>
+            <p class="reveal-up" style="transition-delay: 0.1s;">Tecnologia digital e design dental para transformar sua autoestima e saúde.</p>
+            <a href="#resultados" class="btn-cta reveal-up" style="transition-delay: 0.2s;">Descubra a Odontologia Digital</a>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse-icon">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Discover</span>
+        </div>
+    </section>
+
+    <!-- Diferenciais (CSS Grid) -->
+    <section id="diferenciais" class="section bg-white">
+        <div class="container">
+            <div class="text-center">
+                <span style="color: var(--color-primary); letter-spacing: 2px; font-size: 0.9rem; font-weight: 600;">TECNOLOGIA AVANÇADA</span>
+                <h2 class="reveal-up">Odontologia do Futuro</h2>
+            </div>
+
+            <div class="differentials-grid">
+                <!-- Item 1: Escaneamento 3D -->
+                <article class="grid-item grid-item-1 reveal-up">
+                    <img src="assets/imagens/Diferenciais-Escaneamento-3D.webp" alt="Escaneamento 3D Digital" class="card-img">
+                    <div class="card-content">
+                        <h3>Escaneamento 3D Digital</h3>
+                        <p>Diga adeus às moldagens desconfortáveis. Mapeamos seu sorriso com precisão micrométrica em segundos.</p>
+                    </div>
+                </article>
+
+                <!-- Item 2: Texto Sedação -->
+                <article class="grid-item grid-item-2 reveal-up" style="transition-delay: 0.1s;">
+                    <div style="padding: 1rem;">
+                        <h3>Sedação Consciente</h3>
+                        <p>Experiência livre de ansiedade. Relaxe completamente enquanto cuidamos do seu sorriso.</p>
+                    </div>
+                </article>
+
+                <!-- Item 3: Invisalign -->
+                <article class="grid-item grid-item-3 reveal-up" style="transition-delay: 0.2s;">
+                    <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; height: 100%;">
+                        <h3 style="color: var(--color-primary);">Invisalign</h3>
+                        <h3>Diamond Provider</h3>
+                        <p>Top 1% dos doutores que mais tratam casos complexos no mundo.</p>
+                    </div>
+                </article>
+
+                <!-- Item 4: Imagem Sedação/Ambiente -->
+                <article class="grid-item grid-item-4 reveal-up" style="transition-delay: 0.3s;">
+                    <img src="assets/imagens/Diferenciais-Sedação-Consciente.webp" alt="Ambiente Zen" class="card-img">
+                    <div class="card-content">
+                        <h3>Conforto Absoluto & Spa</h3>
+                        <p>Poltronas de massagem e ambiente sensorial projetado para seu bem-estar.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider Antes/Depois -->
+    <section id="resultados" class="section">
+        <div class="container text-center">
+            <h2 class="reveal-up">O Poder da Transformação</h2>
+            <p class="reveal-up">Arraste para ver a diferença que as Facetas de Porcelana podem fazer.</p>
+        </div>
+
+        <div class="comparison-container reveal-up">
+            <div class="comparison-image-container" id="comparison-slider">
+                <!-- Before Image (Base) -->
+                <img src="assets/imagens/Antes.webp" alt="Sorriso Antes" class="img-before">
+                
+                <!-- After Image (Clipped) -->
+                <div class="img-after-wrapper" id="after-wrapper">
+                    <img src="assets/imagens/Depois.webp" alt="Sorriso Depois" class="img-after" id="img-after-inner">
+                </div>
+
+                <!-- Labels -->
+                <span class="label label-after">DEPOIS</span>
+                <span class="label label-before">ANTES</span>
+
+                <!-- Handle (Drag Controls) -->
+                <div class="slider-line" id="slider-line"></div>
+                <div class="slider-handle" id="slider-handle">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tratamentos (Tabs) -->
+    <section id="tratamentos" class="section bg-white">
+        <div class="container">
+            <h2 class="text-center reveal-up">Especialidades</h2>
+            
+            <div class="tabs-container reveal-up">
+                <div class="tabs-header">
+                    <button class="tab-btn active" onclick="openTab(event, 'estetica')">Estética Dental</button>
+                    <button class="tab-btn" onclick="openTab(event, 'implantes')">Implantes</button>
+                    <button class="tab-btn" onclick="openTab(event, 'orto')">Ortodontia</button>
+                </div>
+
+                <div id="estetica" class="tab-content active">
+                    <div class="treatment-info">
+                        <h3>Lentes de Contato & Facetas</h3>
+                        <p>Tranforme cor, formato e tamanho dos dentes com lâminas de cerâmica ultra-finas. O procedimento é minimamente invasivo e oferece resultados naturais e duradouros.</p>
+                        <ul class="treatment-list">
+                            <li>Planejamento Digital do Sorriso (DSD)</li>
+                            <li>Lentes em Porcelana Feldspática</li>
+                            <li>Clareamento a Laser Dual-Mode</li>
+                        </ul>
+                    </div>
+                    <div class="treatment-img">
+                        <img src="assets/imagens/Detalhe Faceta (Aba Estética).webp" alt="Estética Dental" style="border-radius: 12px;">
+                    </div>
+                </div>
+
+                <div id="implantes" class="tab-content">
+                    <div class="treatment-info">
+                        <h3>Implantes Suíços Straumann</h3>
+                        <p>Recupere a função e estética com a melhor tecnologia de implantes do mundo. Cicatrização mais rápida e estética gengival superior.</p>
+                        <ul class="treatment-list">
+                            <li>Carga Imediata (Dentes no mesmo dia)</li>
+                            <li>Cirurgia Guiada sem cortes</li>
+                            <li>Próteses tipo Protocolo Zircônia</li>
+                        </ul>
+                    </div>
+                    <div class="treatment-img">
+                         <img src="assets/imagens/Implante 3D (Aba Implantes).webp" alt="Implantes" style="border-radius: 12px;">
+                    </div>
+                </div>
+
+                <div id="orto" class="tab-content">
+                    <div class="treatment-info">
+                        <h3>Ortodontia Invisível</h3>
+                        <p>O alinhamento dos seus sonhos, sem metais. Como Diamond Providers, tratamos os casos mais complexos com alinhadores transparentes.</p>
+                        <ul class="treatment-list">
+                            <li>Invisalign Full / Comprehensive</li>
+                            <li>Scanner iTero Element 5D</li>
+                            <li>Previsibilidade de resultado</li>
+                        </ul>
+                    </div>
+                    <div class="treatment-img">
+                         <img src="assets/imagens/Alinhador Invisível (Aba Ortodontia).webp" alt="Ortodontia" style="border-radius: 12px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria (Scroll Snap) -->
+    <section id="clinica" class="section">
+        <div class="container text-center mb-5">
+            <h2 class="reveal-up">Luminare Experience</h2>
+            <p class="reveal-up">Arquitetura pensada para o seu acolhimento.</p>
+        </div>
+        
+        <div class="gallery-wrapper reveal-right">
+            <div class="gallery-track">
+                <div class="gallery-item">
+                    <img src="assets/imagens/Recepção Premium.webp" alt="Recepção">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/imagens/Sala de Atendimento.webp" alt="Consultório">
+                </div>
+                <!-- Placeholder for extra gallery items to show scroll effect -->
+                <div class="gallery-item">
+                    <img src="assets/imagens/Espaço Café (Luminare Experience).webp" alt="Café">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/imagens/Laboratório Digital.webp" alt="Lab">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Visit Us</h4>
+                    <p>Av. Faria Lima, 1234 - Cob 50</p>
+                    <p>Jardim Paulistano, São Paulo - SP</p>
+                    <p>+55 11 99999-8888</p>
+                    
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">WhatsApp</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Horários</h4>
+                    <p>Seg a Sex: 08h - 20h</p>
+                    <p>Sáb: 09h - 14h</p>
+                </div>
+                <div class="footer-map">
+                    <img src="assets/imagens/Footer - Mapa Estilizado.webp" alt="Localização" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Luminare Odontologia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
