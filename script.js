@@ -7,8 +7,35 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initHeaderScroll();
     initBeforeAfterSlider();
+    initMobileNav();
     // Tab function is global or attached here
 });
+
+/* =========================================
+   MOBILE NAV LOGIC
+   ========================================= */
+function initMobileNav() {
+    const btn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-link');
+
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        nav.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking a link
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            btn.classList.remove('active');
+            nav.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+}
 
 /* =========================================
    SCROLL REVEAL (Intersection Observer)
