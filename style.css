@@ -597,15 +597,17 @@ img { max-width: 100%; display: block; object-fit: cover; }
   }
   
   .hero-bg {
-    object-position: 60% center; /* Show more of the model's face */
+    object-position: center center; /* Center the image to cover full width */
+    width: 100%;
+    min-width: 100vw;
   }
   
   .hero-overlay {
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.5) 0%,
-      rgba(255, 255, 255, 0.3) 40%,
-      transparent 100%
+      rgba(255, 255, 255, 0.7) 0%,
+      rgba(255, 255, 255, 0.5) 30%,
+      rgba(255, 255, 255, 0.2) 100%
     );
   }
   
