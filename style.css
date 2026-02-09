@@ -46,6 +46,8 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 h1, h2, h3, h4 {
@@ -218,6 +220,7 @@ img { max-width: 100%; display: block; object-fit: cover; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   z-index: -2;
 }
 
@@ -630,8 +633,18 @@ img { max-width: 100%; display: block; object-fit: cover; }
   
   /* Extra mobile fixes */
   .section { padding: 60px 0; }
-  .scroll-indicator { display: none; } /* Hide on mobile */
+  .scroll-indicator { display: none; }
   .tabs-header { flex-wrap: wrap; gap: 0.5rem; }
   .tab-btn { padding: 0.8rem 1rem; font-size: 1rem; }
   .gallery-item { height: 400px; }
+  
+  /* Hero image - focus on face, remove white strip */
+  .hero-bg {
+    object-position: 70% center; /* Focus on face */
+  }
+  
+  /* Hero overlay - full coverage, no gradient */
+  .hero-overlay {
+    background: rgba(255, 255, 255, 0.75);
+  }
 }
